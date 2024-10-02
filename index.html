@@ -83,10 +83,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
             margin-bottom: 20px;
             width: calc(50% - 10px); /* Ajustement pour mobile */
             height: 300px;
-            justify-content: space-between;
             box-sizing: border-box;
             padding: 10px;
             transition: transform 0.3s;
@@ -101,11 +101,11 @@
         }
 
         .offer img {
-            width: 200px; /* Réduire la largeur de l'image pour mobile */
-            height: auto; /* Garde les proportions */
-            margin-top: 10px;
-            border-radius: 10px;
-            box-shadow: none; /* Enlever la zone blanche autour de l'image */
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 10px;
         }
 
         footer {
