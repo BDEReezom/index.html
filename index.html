@@ -127,10 +127,6 @@
             transform: scale(1.05);
         }
 
-        .offer:hover p {
-            color: #007BFF; /* Changer la couleur du texte au survol */
-        }
-
         .offer img {
             width: 100%;
             max-width: 200px;
@@ -139,6 +135,16 @@
             margin-bottom: 10px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Indique que l'image est cliquable */
+        }
+
+        .offer-text {
+            display: none; /* Masquer le texte par défaut */
+            text-align: left; /* Aligner le texte à gauche */
+        }
+
+        .offer:hover .offer-text {
+            display: block; /* Afficher le texte lors du survol de l'offre */
         }
 
         footer {
@@ -208,62 +214,80 @@
         </div>
         
         <div id="bar" class="offers-container active">
-             <div class="offer">
+            <div class="offer">
                 <img src="ASKIP.png" alt="Askip">
-                <p>Tarifs réduits consultable sur la carte des boissons au tarif étudiant.e.s. Chaque étudiant.e doit adhérer au café associatif Askip, à hauteur de 1€ pour l'année en cours. </p>
+                <div class="offer-text">
+                    <p>Tarifs réduits consultable sur la carte des boissons au tarif étudiant.e.s. Chaque étudiant.e doit adhérer au café associatif Askip, à hauteur de 1€ pour l'année en cours.</p>
+                </div>
             </div>
             <div class="offer">
                 <img src="Bibou.png" alt="Bibou">
-                <p>Un HAPPY HOUR du Lundi au vendredi de 17h à 19h avec -20% sur les bières & les softs</p>
+                <div class="offer-text">
+                    <p>Un HAPPY HOUR du Lundi au vendredi de 17h à 19h avec -20% sur les bières & les softs.</p>
+                </div>
             </div>
             <div class="offer">
                 <img src="Cascabel.png" alt="Cascabel">
-                <p>Happy hour toute la soirée sur un choix de 7 bières pression dont la pils a 2€ le demi et 4 € la pinte. Les autres ont 0,50 € de moins sur le demi et 1€  de moins sur les pintes. Jagger bomb a 5€ au lieu de 5,50€. Alcool + soft 6,50€.
-Les shooters sont à 2,50€
-                    Shooter de bienvenue offert !</p>
+                <div class="offer-text">
+                    <p>Happy hour toute la soirée sur un choix de 7 bières pression dont la pils à 2€ le demi et 4 € la pinte. Les autres ont 0,50 € de moins sur le demi et 1€ de moins sur les pintes. Jagger bomb à 5€ au lieu de 5,50€. Alcool + soft à 6,50€. Les shooters sont à 2,50€. Shooter de bienvenue offert !</p>
+                </div>
             </div>
-             <div class="offer">
+            <div class="offer">
                 <img src="Marietta - rond.png" alt="Marietta">
-                <p>Tarif préférentiel sur la pils ( biere ) soit 3€ les 42cl tous les lundi mardi mercredi de 17h30 à 20h30 et le mercredi et jeudi les 42 cl de IPA sera 4,5€ 
-                    Tous les midis de lundi à vendredi de 12h30 à 14h formule croque monsieur + frite salade + 25 cl bière pils ou soft ou muscadet = 7€</p>
+                <div class="offer-text">
+                    <p>Tarif préférentiel sur la pils (bière) soit 3€ les 42cl tous les lundi mardi mercredi de 17h30 à 20h30 et le mercredi et jeudi les 42 cl de IPA seront 4,5€. Tous les midis de lundi à vendredi de 12h30 à 14h formule croque monsieur + frite salade + 25 cl bière pils ou soft ou muscadet = 7€.</p>
+                </div>
             </div>
-             <div class="offer">
+            <div class="offer">
                 <img src="SidrasBar-Fond.png" alt="Sidras">
-                <p>La pinte de cidre brut (50cl) à 5€ TTC, la demi de jus de pomme Bio (25 cl) à 3€ TTC, remise de 10% sur l'espace cave (bouteilles et coffrets) 
-                    Cadeau découverte : Un demi (25cl) de cidre brut</p>
+                <div class="offer-text">
+                    <p>La pinte de cidre brut (50cl) à 5€ TTC, la demi de jus de pomme Bio (25 cl) à 3€ TTC, remise de 10% sur l'espace cave (bouteilles et coffrets). Cadeau découverte : Un demi (25cl) de cidre brut.</p>
+                </div>
             </div>
         </div>
 
         <div id="restaurant" class="offers-container">
             <div class="offer">
                 <img src="https://example.com/restaurant_offer1.jpg" alt="Offre Restaurant 1">
-                <p>15% de réduction sur le menu du jour</p>
+                <div class="offer-text">
+                    <p>15% de réduction sur le menu du jour</p>
+                </div>
             </div>
             <div class="offer">
                 <img src="https://example.com/restaurant_offer2.jpg" alt="Offre Restaurant 2">
-                <p>Menu enfant gratuit avec chaque plat adulte</p>
+                <div class="offer-text">
+                    <p>Menu enfant gratuit avec chaque plat adulte</p>
+                </div>
             </div>
         </div>
 
         <div id="magasin" class="offers-container">
             <div class="offer">
                 <img src="https://example.com/magasin_offer1.jpg" alt="Offre Magasin 1">
-                <p>20% de réduction sur tous les vêtements</p>
+                <div class="offer-text">
+                    <p>20% de réduction sur tous les vêtements</p>
+                </div>
             </div>
             <div class="offer">
                 <img src="https://example.com/magasin_offer2.jpg" alt="Offre Magasin 2">
-                <p>Achetez-en 2, obtenez-en 1 gratuit sur les accessoires</p>
+                <div class="offer-text">
+                    <p>Achetez-en 2, obtenez-en 1 gratuit sur les accessoires</p>
+                </div>
             </div>
         </div>
 
         <div id="culturel" class="offers-container">
             <div class="offer">
                 <img src="https://example.com/culturel_offer1.jpg" alt="Offre Culturel 1">
-                <p>Entrée gratuite pour un enfant avec un adulte au musée</p>
+                <div class="offer-text">
+                    <p>Entrée gratuite pour un enfant avec un adulte au musée</p>
+                </div>
             </div>
             <div class="offer">
                 <img src="https://example.com/culturel_offer2.jpg" alt="Offre Culturel 2">
-                <p>20% de réduction sur les billets de spectacle</p>
+                <div class="offer-text">
+                    <p>20% de réduction sur les billets de spectacle</p>
+                </div>
             </div>
         </div>
     </section>
@@ -279,19 +303,16 @@ Les shooters sont à 2,50€
 
     <script>
         function showOffers(category, event) {
-            // Masquer toutes les offres
             const containers = document.querySelectorAll('.offers-container');
             containers.forEach(container => {
                 container.classList.remove('active');
             });
 
-            // Retirer la classe active de tous les onglets
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => {
                 tab.classList.remove('active');
             });
 
-            // Afficher l'offre sélectionnée et activer l'onglet
             document.getElementById(category).classList.add('active');
             event.target.classList.add('active');
         }
