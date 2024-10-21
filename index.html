@@ -140,7 +140,7 @@
 
         .offer-text {
             display: none; /* Masquer le texte par défaut */
-            text-align: center; /* Aligner le texte à gauche */
+            text-align: left; /* Aligner le texte à gauche */
         }
 
         .offer:hover .offer-text {
@@ -217,104 +217,59 @@
             <div class="offer">
                 <img src="ASKIP.png" alt="Askip">
                 <div class="offer-text">
-                    <p>Tarifs réduits consultable sur la carte des boissons au tarif étudiant.e.s. Chaque étudiant.e doit adhérer au café associatif Askip, à hauteur de 1€ pour l'année en cours.</p>
+                    <p>Tarifs réduits consultables sur la carte des boissons au tarif étudiant.e.s. Chaque étudiant.e doit adhérer au café associatif Askip, à hauteur de 1€ pour l'année en cours.</p>
                 </div>
+                <a href="https://www.google.com/maps?q=ASKIP+location" target="_blank">Voir sur Google Maps</a>
             </div>
             <div class="offer">
                 <img src="Bibou.png" alt="Bibou">
                 <div class="offer-text">
                     <p>Un HAPPY HOUR du Lundi au vendredi de 17h à 19h avec -20% sur les bières & les softs.</p>
                 </div>
+                <a href="https://www.google.com/maps?q=Bibou+location" target="_blank">Voir sur Google Maps</a>
             </div>
             <div class="offer">
                 <img src="Cascabel.png" alt="Cascabel">
                 <div class="offer-text">
                     <p>Happy hour toute la soirée sur un choix de 7 bières pression dont la pils à 2€ le demi et 4 € la pinte. Les autres ont 0,50 € de moins sur le demi et 1€ de moins sur les pintes. Jagger bomb à 5€ au lieu de 5,50€. Alcool + soft à 6,50€. Les shooters sont à 2,50€. Shooter de bienvenue offert !</p>
                 </div>
+                <a href="https://www.google.com/maps?q=Cascabel+location" target="_blank">Voir sur Google Maps</a>
             </div>
             <div class="offer">
                 <img src="Marietta - rond.png" alt="Marietta">
                 <div class="offer-text">
-                    <p>Tarif préférentiel sur la pils (bière) soit 3€ les 42cl tous les lundi mardi mercredi de 17h30 à 20h30 et le mercredi et jeudi les 42 cl de IPA seront 4,5€. Tous les midis de lundi à vendredi de 12h30 à 14h formule croque monsieur + frite salade + 25 cl bière pils ou soft ou muscadet = 7€.</p>
+                    <p>Tarif préférentiel sur la pils (bière) soit 3€ les 42cl tous les lundi mardi mercredi de 17h30 à 20h30 et le mercredi et jeudi les 42 cl de IPA seront 4,5€. Tous les midis, une assiette de tapas achetée = une assiette de tapas offerte.</p>
                 </div>
-            </div>
-            <div class="offer">
-                <img src="SidrasBar-Fond.png" alt="Sidras">
-                <div class="offer-text">
-                    <p>La pinte de cidre brut (50cl) à 5€ TTC, la demi de jus de pomme Bio (25 cl) à 3€ TTC, remise de 10% sur l'espace cave (bouteilles et coffrets). Cadeau découverte : Un demi (25cl) de cidre brut.</p>
-                </div>
+                <a href="https://www.google.com/maps?q=Marietta+location" target="_blank">Voir sur Google Maps</a>
             </div>
         </div>
 
-        <div id="restaurant" class="offers-container">
-            <div class="offer">
-                <img src="https://example.com/restaurant_offer1.jpg" alt="Offre Restaurant 1">
-                <div class="offer-text">
-                    <p>15% de réduction sur le menu du jour</p>
-                </div>
-            </div>
-            <div class="offer">
-                <img src="https://example.com/restaurant_offer2.jpg" alt="Offre Restaurant 2">
-                <div class="offer-text">
-                    <p>Menu enfant gratuit avec chaque plat adulte</p>
-                </div>
-            </div>
-        </div>
+        <!-- Ajoutez d'autres sections pour Restaurant, Magasin, Culturel comme ci-dessus -->
 
-        <div id="magasin" class="offers-container">
-            <div class="offer">
-                <img src="https://example.com/magasin_offer1.jpg" alt="Offre Magasin 1">
-                <div class="offer-text">
-                    <p>20% de réduction sur tous les vêtements</p>
-                </div>
-            </div>
-            <div class="offer">
-                <img src="https://example.com/magasin_offer2.jpg" alt="Offre Magasin 2">
-                <div class="offer-text">
-                    <p>Achetez-en 2, obtenez-en 1 gratuit sur les accessoires</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="culturel" class="offers-container">
-            <div class="offer">
-                <img src="https://example.com/culturel_offer1.jpg" alt="Offre Culturel 1">
-                <div class="offer-text">
-                    <p>Entrée gratuite pour un enfant avec un adulte au musée</p>
-                </div>
-            </div>
-            <div class="offer">
-                <img src="https://example.com/culturel_offer2.jpg" alt="Offre Culturel 2">
-                <div class="offer-text">
-                    <p>20% de réduction sur les billets de spectacle</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="instagram" class="instagram">
-        <h2>Suivez-nous sur Instagram</h2>
-        <a href="https://www.instagram.com/reezom_ensanantes" target="_blank">@reezom_ensanantes</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Carte de Réduction. Tous droits réservés.</p>
+        <p>&copy; 2024 Votre entreprise. Tous droits réservés.</p>
+        <div class="instagram">
+            <a href="https://instagram.com/votre_compte" target="_blank">Suivez-nous sur Instagram</a>
+        </div>
     </footer>
 
     <script>
         function showOffers(category, event) {
-            const containers = document.querySelectorAll('.offers-container');
-            containers.forEach(container => {
-                container.classList.remove('active');
-            });
-
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => {
+            // Supprimer la classe active de tous les onglets
+            document.querySelectorAll('.tab').forEach(tab => {
                 tab.classList.remove('active');
             });
+            // Ajouter la classe active à l'onglet cliqué
+            event.currentTarget.classList.add('active');
 
+            // Masquer toutes les offres
+            document.querySelectorAll('.offers-container').forEach(container => {
+                container.classList.remove('active');
+            });
+            // Afficher les offres de la catégorie sélectionnée
             document.getElementById(category).classList.add('active');
-            event.target.classList.add('active');
         }
     </script>
 </body>
