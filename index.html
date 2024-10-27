@@ -32,7 +32,7 @@
         h1 {
             font-family: 'Roboto Slab', sans-serif; 
             margin: 0;
-            font-size: 2em; /* Taille réduite pour mobile */
+            font-size: 1.8em; /* Taille ajustée pour mobile */
         }
 
         nav ul {
@@ -43,7 +43,7 @@
 
         nav ul li {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0 5px;
         }
 
         nav ul li a {
@@ -59,55 +59,56 @@
         section {
             margin: 10px auto;
             padding: 10px;
-            max-width: 1000px; /* Ajustement pour mobile */
+            max-width: 1000px;
             text-align: center;
         }
 
         h2 {
             font-family: 'Roboto Slab', sans-serif;
             margin-top: 0;
-            font-size: 1.8em; /* Taille réduite pour mobile */
+            font-size: 1.6em; /* Taille ajustée pour mobile */
             border-bottom: 2px solid #007BFF;
             padding-bottom: 10px;
         }
 
         .tabs {
             display: flex;
+            flex-wrap: wrap; /* Permettre l'enroulement des onglets sur petits écrans */
             justify-content: center;
-            margin: 30px 0; /* Espace entre les onglets et le titre */
+            margin: 30px 0;
         }
 
         .tab {
             cursor: pointer;
-            padding: 10px 20px;
-            margin: 0 5px;
-            background-color: #fff; /* Fond blanc */
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
             transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre sur les onglets */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .tab:hover {
-            background-color: #f1f1f1; /* Couleur au survol */
+            background-color: #f1f1f1;
         }
 
         .tab.active {
-            background: linear-gradient(135deg, #007BFF, #8A2BE2); /* Dégradé bleu-violet */
+            background: linear-gradient(135deg, #007BFF, #8A2BE2);
             color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre renforcée pour l'onglet actif */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .offers-container {
-            display: none; /* Masquer toutes les offres par défaut */
+            display: none;
             flex-wrap: wrap;
-            justify-content: center; /* Centrer les offres */
+            justify-content: center;
             padding: 0;
             margin: 0;
         }
 
         .offers-container.active {
-            display: flex; /* Afficher les offres actives */
+            display: flex;
         }
 
         .offer {
@@ -115,8 +116,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
-            width: calc(50% - 10px); /* Ajustement pour mobile */
+            margin: 10px;
+            width: calc(50% - 20px); /* Deux offres par ligne sur mobile */
+            max-width: 200px; /* Limite de largeur pour les offres */
             height: 300px;
             box-sizing: border-box;
             padding: 10px;
@@ -129,22 +131,21 @@
 
         .offer img {
             width: 100%;
-            max-width: 200px;
-            height: 200px;
+            height: auto; /* Ajustement automatique de la hauteur */
             object-fit: contain;
             margin-bottom: 10px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer; /* Indique que l'image est cliquable */
+            cursor: pointer;
         }
 
         .offer-text {
-            display: none; /* Masquer le texte par défaut */
-            text-align: center; /* Aligner le texte au centre */
+            display: none;
+            text-align: center;
         }
 
         .offer:hover .offer-text {
-            display: block; /* Afficher le texte lors du survol de l'offre */
+            display: block;
         }
 
         footer {
@@ -172,15 +173,14 @@
             text-decoration: underline;
         }
 
-        /* Styles supplémentaires pour écrans plus petits */
         @media (max-width: 600px) {
             nav ul li {
-                display: block; /* Empile les éléments de navigation */
+                display: block;
                 margin: 5px 0;
             }
 
             .offer {
-                width: 100%; /* Offre pleine largeur sur mobile */
+                width: calc(100% - 20px); /* Offre pleine largeur sur mobile */
                 height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
             }
         }
@@ -238,142 +238,97 @@
             <div class="offer">
                 <img src="1.png" alt="La Guinguette du Belvédère">
                 <div class="offer-text">
-                    <p>La Pinte de Blonde à 5 €
-Le punch maison  à 3 € 
-Le Mojito à 5 euros.</p>
+                    <p>La Guinguette du Belvédère offre 10% de réduction sur les boissons avec la carte KICHTARCHI, sans limitation de jour ou d'heure.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/LX1bN2hUugvqZWQn7" target="_blank">23 Bd Gaston Doumergue, 44200 Nantes</a>
-            </div>
-            <div class="offer">
-                <img src="Marietta - rond.png" alt="Marietta">
-                <div class="offer-text">
-                    <p>Tarif préférentiel sur la pils (bière) soit 3€ les 42cl tous les lundi mardi mercredi de 17h30 à 20h30 et le mercredi et jeudi les 42 cl de IPA seront 4,5€. Tous les midis, une assiette de tapas achetée = une assiette de tapas offerte.</p>
-                </div>
-                <a href="https://maps.app.goo.gl/Qmktm8NKeYWMJJ3n7" target="_blank">11 Rue la Tour d'Auvergne, 44200 Nantes</a>
-            </div>
-             <div class="offer">
-                <img src="SidrasBar-Fond.png" alt="Sidras - Bar et cave">
-                <div class="offer-text">
-                    <p>La pinte de cidre brut (50cl) à 5€ TTC, la demi de jus de pomme Bio (25 cl) à 3€ TTC, remise de 10% sur l'espace cave (bouteilles et coffrets) + cadeau découverte : Un demi (25cl) de cidre brut </p>
-                </div>
-                <a href="https://maps.app.goo.gl/9Kj7Zf3eHE5gfEWQ6" target="_blank">34 Mail des Chantiers, 44200 Nantes</a>
-            </div>
-            <div class="offer">
-                <img src="avatar-rond-gris.png" alt="Tapage">
-                <div class="offer-text">
-                    <p>-15% sur l'ensemble des boissons à consomer sur place les mardis et mercredis</p>
-                </div>
-                <a href="https://maps.app.goo.gl/81dpXN9T4TDDwKok6" target="_blank">11 Rue des Marchandises, 44200 Nantes</a>
+                <a href="https://www.google.com/maps?q=La+Guinguette+du+Belv%C3%A9d%C3%A8re+location" target="_blank">Voir sur Google Maps</a>
             </div>
         </div>
-        
+
         <div id="restaurant" class="offers-container">
             <div class="offer">
-                <img src="180g_noir.png" alt="180g Pizza">
+                <img src="Burger.png" alt="Burger Joint">
                 <div class="offer-text">
-                    <p>1 Margaret + 1 canette pour 10€</p>
+                    <p>5€ de réduction sur l'addition à partir de 20€ de consommation.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/61ADzEbN6v5h45Au6" target="_blank">6c Pl. François II, 44200 Nantes</a>
+                <a href="https://www.google.com/maps?q=Burger+Joint+location" target="_blank">Voir sur Google Maps</a>
             </div>
             <div class="offer">
-                <img src="LOGO-BAHIA-COULEURS-V2-1.png" alt="Bahia">
+                <img src="Oka.png" alt="Oka">
                 <div class="offer-text">
-                    <p>-10% sur LE PLAT DU JOUR / formules : ENTREÉ + PLAT OU PLAT + DESSERT / ENTRÉE + PLAT + DESSERT OU BOISSON / ENTRÉE + PLAT + BOISSON + DESSERT </p>
+                    <p>Réduction de 15% sur l'addition, uniquement sur place. Consommation sur place obligatoire.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/JFT8DfAyY4ou5WkG6" target="_blank">17 Rue Louis Blanc, 44200 Nantes</a>
+                <a href="https://www.google.com/maps?q=Oka+location" target="_blank">Voir sur Google Maps</a>
             </div>
             <div class="offer">
-                <img src="2.png" alt="BioBurger">
+                <img src="Wrap.png" alt="Wrap Joint">
                 <div class="offer-text">
-                    <p>-10% sur un menu par personne et par jour</p>
+                    <p>Un wrap acheté, un wrap offert, dans la limite de 3 wraps par carte, uniquement sur place.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/Wjt8FvDAHFdfA4ox9" target="_blank">5 Bd Léon Bureau, 44200 Nantes</a>
-            </div>
-            <div class="offer">
-                <img src="Flam's Nantes - Logo.JPG" alt="Flam's">
-                <div class="offer-text">
-                    <p>-10% sur les formules Elsassich et Hopla du mardi midi au jeudi soir - 1/2 flamenkuche tarditionnelle offerte</p>
-                </div>
-                <a href="https://maps.app.goo.gl/3JgRtm5WpJnPEKDX6" target="_blank">14Bis Rue Talensac, 44000 Nantes</a>
-            </div>
-            <div class="offer">
-                <img src="La mie caline.png" alt="La mie câline">
-                <div class="offer-text">
-                    <p>-15 % sur tout les produits hors concept 3+1 offerts où les offres 2+1 achetés</p>
-                </div>
-                <a href="https://maps.app.goo.gl/wX1swJkB2xRdM15r8" target="_blank">10 All. Brancas, 44000 Nantes et 1 All. Cassard, 44000 Nantes</a>
-            </div>
-
-            <div class="offer">
-                <img src="3.png" alt="La pâte folle">
-                <div class="offer-text">
-                    <p>Toutes les pizzas à 10€ les mardis, mercredis et jeudis (hors pizza du moment sur ardoise)</p>
-                </div>
-                <a href="https://maps.app.goo.gl/uMX6oKAF8AogLK229" target="_blank">15 Rue la Tour d'Auvergne, 44200 Nantes</a>
-            </div>
-            <div class="offer">
-                <img src="Ma soeur et moi.jpg" alt="Ma soeur et moi">
-                <div class="offer-text">
-                    <p>-10% sur les menus (plat 13,5€ au lieu de 15€ / formule entrée+plat ou plat+dessert 16,20€ au lieu de 18€ et formule entrée +plat+dessert 18€ au lieu de 20€)</p>
-                </div>
-                <a href="https://maps.app.goo.gl/sAEkcobVGLiTfZH38" target="_blank">43 Rue Grande Biesse, 44200 Nantes</a>
+                <a href="https://www.google.com/maps?q=Wrap+Joint+location" target="_blank">Voir sur Google Maps</a>
             </div>
         </div>
 
         <div id="magasin" class="offers-container">
             <div class="offer">
-                <img src="GL Noir.png" alt="Galeries Lafayette">
+                <img src="Polo.png" alt="Polo Shop">
                 <div class="offer-text">
-                    <p>Cadeau offert dès 35€ d'achat en magasin. Obligation de créer un compte fidélité pour bénéficier de l'offre. Le cadeau sera renouvelé plusieurs fois dans l'année.  Cadeau découverte offert </p>
+                    <p>10% de réduction sur toute la boutique, valable tous les jours.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/cyH7PD88jBoZQ3nQ9" target="_blank">2-20 Rue de la Marne, 44000 Nantes</a>
+                <a href="https://www.google.com/maps?q=Polo+Shop+location" target="_blank">Voir sur Google Maps</a>
             </div>
             <div class="offer">
-                <img src="Le-Geant-des-Beaux-Arts.png" alt="Géant des Beaux Arts">
+                <img src="Vente.png" alt="Vente">
                 <div class="offer-text">
-                    <p></p>
+                    <p>5% de réduction sur les achats, et 10% lors des soldes.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/UhULCFQ8TY4UwaTH9" target="_blank">58 Rue de l'Angélique des Estuaires, 44200 Nantes</a>
+                <a href="https://www.google.com/maps?q=Vente+location" target="_blank">Voir sur Google Maps</a>
             </div>
         </div>
-        
+
         <div id="culturel" class="offers-container">
             <div class="offer">
-                <img src="ONPL-Noir.png" alt="ONPL - La Cité des Congrès de Nantes">
+                <img src="Cinéma.png" alt="Cinéma">
                 <div class="offer-text">
-                    <p>Places au tarif de 3€ pour le concert En Bohême qui aura lieu le 22 avril à la Cité des congrès de Nantes avec une soirée VIP en amont du concert (rencontre avec un musicien et visite des coulisses) pour 30 personnes, envoyer liste des inscrits avnt 1er avril.</p>
+                    <p>5€ de réduction sur le tarif plein, valable tous les jours.</p>
                 </div>
-                <a href="https://maps.app.goo.gl/4ueJHQNoVkCj2aba8" target="_blank">7 Rue de Valmy, 44000 Nantes</a>
+                <a href="https://www.google.com/maps?q=Cin%C3%A9ma+location" target="_blank">Voir sur Google Maps</a>
+            </div>
+            <div class="offer">
+                <img src="Musée.png" alt="Musée">
+                <div class="offer-text">
+                    <p>Entrée gratuite pour les étudiants avec la carte KICHTARCHI.</p>
+                </div>
+                <a href="https://www.google.com/maps?q=Mus%C3%A9e+location" target="_blank">Voir sur Google Maps</a>
             </div>
         </div>
-
     </section>
 
-    <section id="instagram" class="instagram">
-        <h2>Suivez-nous sur Instagram</h2>
-        <a href="https://www.instagram.com/reezom_ensanantes" target="_blank">@reezom_ensanantes</a>
-    </section>
-    
     <footer>
-        <p>&copy; 2024 Votre BDE. Tous droits réservés.</p>
+        <div class="instagram">
+            <a href="https://www.instagram.com/kichtarchi" target="_blank">Suivez-nous sur Instagram !</a>
+        </div>
+        <p>&copy; 2024 BDE Reezom. Tous droits réservés.</p>
     </footer>
 
     <script>
         function showOffers(category, event) {
-            // Supprimer la classe active de tous les onglets
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
+            // Supprimer la classe active des onglets
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
             // Ajouter la classe active à l'onglet cliqué
             event.currentTarget.classList.add('active');
 
             // Masquer toutes les offres
-            document.querySelectorAll('.offers-container').forEach(container => {
-                container.classList.remove('active');
-            });
-            // Afficher les offres de la catégorie sélectionnée
+            const containers = document.querySelectorAll('.offers-container');
+            containers.forEach(container => container.classList.remove('active'));
+
+            // Afficher l'offre correspondante
             document.getElementById(category).classList.add('active');
         }
+
+        // Afficher la première catégorie par défaut
+        showOffers('bar', { currentTarget: document.querySelector('.tab') });
     </script>
 </body>
 </html>
