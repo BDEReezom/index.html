@@ -59,20 +59,31 @@
         section {
             margin: 10px auto;
             padding: 10px;
-            max-width: 1000px; /* Ajustement pour mobile */
+            max-width: 1000px;
             text-align: center;
+            position: relative; /* Pour positionner la ligne dégradée */
+        }
+
+        .gradient-line {
+            position: absolute;
+            height: 2.5px; /* Épaisseur de la ligne */
+            background: linear-gradient(135deg, #007BFF, #E06D6A); /* Dégradé du bleu à l'orange */
+            top: 60px; /* Positionner la ligne au-dessus de la section */
+            left: 0;
+            right: 0;
         }
 
         h2 {
             font-family: 'Roboto Slab', sans-serif;
             margin-top: 0;
             font-size: 1.8em; /* Taille réduite pour mobile */
-            border-bottom: 2px linear-gradient(135deg, #007BFF, #E06D6A);
+            border-bottom: 2px solid transparent;
             padding-bottom: 10px;
         }
 
         .tabs {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             margin: 30px 0; /* Espace entre les onglets et le titre */
         }
@@ -152,7 +163,6 @@
             padding: 15px;
             color: #333;
             position: relative;
-            bottom: 0;
             width: 100%;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -199,11 +209,13 @@
     </header>
 
     <section id="about">
+        <div class="gradient-line"></div>
         <h2>À propos de la Carte</h2>
         <p>La carte de réduction KICHTARCHI est dédiée aux étudiants de l'école d'architecture de Nantes. Elle vous permet d'accéder à de nombreuses offres grâce à nos SUPER partenaires !</p>
     </section>
 
     <section id="offers">
+        <div class="gradient-line"></div>
         <h2>Offres Disponibles</h2>
         
         <div class="tabs">
@@ -349,13 +361,11 @@ Le Mojito à 5 euros.</p>
 
     </section>
 
-    <section id="instagram" class="instagram">
-        <h2>Suivez-nous sur Instagram</h2>
-        <a href="https://www.instagram.com/reezom_ensanantes" target="_blank">@reezom_ensanantes</a>
-    </section>
-    
     <footer>
-        <p>&copy; 2024 Votre BDE. Tous droits réservés.</p>
+        <div class="instagram">
+            <a href="https://www.instagram.com/kichtarchi" target="_blank">Suivez-nous sur Instagram !</a>
+        </div>
+        <p>&copy; 2024 BDE Reezom. Tous droits réservés.</p>
     </footer>
 
     <script>
